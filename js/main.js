@@ -106,9 +106,7 @@ const userLogin = prompt("Введіть логін");
 function isLoginValid(login) {
   let isValid;
 
-  if (login.length < 4) {
-    isValid = false;
-  } else if (login.length > 16) {
+  if (login.length < 4 || login.length > 16) {
     isValid = false;
   } else {
     isValid = true;
