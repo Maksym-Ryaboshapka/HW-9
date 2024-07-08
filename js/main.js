@@ -104,29 +104,29 @@ const logins = ["Maksym", "TestLogin1", "user537", "Hello"];
 const userLogin = prompt("Введіть логін");
 
 function isLoginValid(login) {
-  let result;
+  let isValid;
 
   if (login.length < 4) {
-    result = false;
+    isValid = false;
   } else if (login.length > 16) {
-    result = false;
+    isValid = false;
   } else {
-    result = true;
+    isValid = true;
   }
 
-  return result;
+  return isValid;
 }
 
 function isLoginUnique(allLogins, login) {
-  let result;
+  let isUnique;
 
   if (allLogins.includes(login)) {
-    result = false;
+    isUnique = false;
   } else {
-    result = true;
+    isUnique = true;
   }
 
-  return result;
+  return isUnique;
 }
 
 function addLogin(allLogins, login) {
